@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>静态博客搭建报告 | Dyy's Blog</title><meta name="author" content="Dyy"><meta name="copyright" content="Dyy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="基于hexo框架的静态博客搭建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="静态博客搭建报告">
+<meta property="og:url" content="http://example.com/2024/04/15/hexo/index.html">
+<meta property="og:site_name" content="Dyy&#39;s Blog">
+<meta property="og:description" content="基于hexo框架的静态博客搭建">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2024/04/16/nJo16MNArsQbChS.jpg">
+<meta property="article:published_time" content="2024-04-15T09:58:00.000Z">
+<meta property="article:modified_time" content="2024-04-16T12:03:27.592Z">
+<meta property="article:author" content="Dyy">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="git">
+<meta property="article:tag" content="Markdown">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2024/04/16/nJo16MNArsQbChS.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2024/04/15/hexo/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><meta/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '静态博客搭建报告',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-04-16 20:03:27'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.1.1"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2024/04/16/GKACn7aZWITmYh6.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Dyy's Blog"><span class="site-name">Dyy's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">静态博客搭建报告</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-04-15T09:58:00.000Z" title="发表于 2024-04-15 17:58:00">2024-04-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-04-16T12:03:27.592Z" title="更新于 2024-04-16 20:03:27">2024-04-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/tech/">tech</a></span></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="主题选取"><a href="#主题选取" class="headerlink" title="主题选取"></a>主题选取</h2><p>本次选取了Hexo社区中比较流行的Butterfly主题。<br>Butterfly提供了现代、简洁且具有吸引力的设计、支持响应式设计、提供了丰富的自定义选项并支持多种语言。同时，它的社区支持很好，可以找到丰富的教程、插件和修改方法。Butterfly主题的开发者会定期更新主题，修复bug并添加新功能，确保主题与Hexo的最新版本兼容。</p>
+<ul>
+<li>文档指路👉：<a target="_blank" rel="noopener" href="https://butterfly.js.org/">https://butterfly.js.org/</a></li>
+</ul>
+<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><p>博客页面共分为主页、时间轴、关于、博客详情页等主要的页面板块，满足个人静态博客页面的基本功能设定。<br>主页展示博客列表，侧边栏以及导航栏等，便于访问者查看博客和页面跳转等操作。时间轴页面按照博客发布时间顺序展示各个博客。关于页面主要展示个人信息和自我介绍。博客详情页具体呈现博客内容。</p>
+<ul>
+<li><p>主页布局👇<br><img src="https://s2.loli.net/2024/04/16/A9QKwNIVq2stSGj.png" alt="homepage.png"></p>
+</li>
+<li><p>时间轴页面布局👇<br><img src="https://s2.loli.net/2024/04/16/GMDc3Qt8iBuPay2.png" alt="archives.png"></p>
+</li>
+<li><p>博客详情页布局👇<br><img src="https://s2.loli.net/2024/04/16/e6hHOJcZx9iYmlg.png" alt="article.png"></p>
+</li>
+<li><p>标签页页面布局👇<br><img src="https://s2.loli.net/2024/04/16/pmxGUJvOlteRsjZ.png" alt="tags.png"></p>
+</li>
+<li><p>关于页面布局👇<br><img src="https://s2.loli.net/2024/04/16/uYvyBAxGzVrTwOF.png" alt="about.png"></p>
+</li>
+</ul>
+<h2 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h2><p>简要列举一些基本功能实现方法及效果：</p>
+<h3 id="1-主页导航栏设置"><a href="#1-主页导航栏设置" class="headerlink" title="1.主页导航栏设置"></a>1.主页导航栏设置</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Menu 目錄</span></span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line">   <span class="string">首页:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-home</span></span><br><span class="line">   <span class="string">时间轴:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-archive</span></span><br><span class="line">   <span class="string">标签:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-tags</span></span><br><span class="line">   <span class="string">分类:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-folder-open</span></span><br><span class="line">   <span class="string">List||fas</span> <span class="attr">fa-list:</span></span><br><span class="line">     <span class="string">音乐:</span> <span class="string">/music/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-music</span></span><br><span class="line">     <span class="string">电影:</span> <span class="string">/movies/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-video</span></span><br><span class="line">   <span class="string">链接:</span> <span class="string">/link/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-link</span></span><br><span class="line">   <span class="string">关于:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fas</span> <span class="string">fa-heart</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>效果展示👇</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/04/16/j9xKwSoHLbhCePq.png" alt="nav.png"></p>
+<h3 id="2-博客页面设置"><a href="#2-博客页面设置" class="headerlink" title="2.博客页面设置"></a>2.博客页面设置</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">title: 静态博客搭建报告</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">    -</span> hexo</span><br><span class="line"><span class="bullet">    -</span> git</span><br><span class="line"><span class="bullet">    -</span> Markdown</span><br><span class="line">categories:</span><br><span class="line"><span class="bullet">    -</span> tech</span><br><span class="line">description: 基于hexo框架的静态博客搭建</span><br><span class="line">cover: https://s2.loli.net/2024/04/16/nJo16MNArsQbChS.jpg</span><br><span class="line">abbrlink: 1</span><br><span class="line">date: 2024-04-15 17:58:00</span><br><span class="line">comments: true</span><br><span class="line">top<span class="emphasis">_img: https://s2.loli.net/2024/04/16/GKACn7aZWITmYh6.jpg</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>效果展示👇</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/04/16/UoryHikNJXxqe9T.png" alt="blogcap.png"></p>
+<h3 id="3-鼠标特效"><a href="#3-鼠标特效" class="headerlink" title="3.鼠标特效"></a>3.鼠标特效</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Mouse click effects: Heart symbol (鼠標點擊效果: 愛心)</span></span><br><span class="line"><span class="attr">click_heart:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mobile:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>效果展示👇</li>
+</ul>
+<p><img src="https://s2.loli.net/2024/04/16/RGwBHCNT8AQiuXk.png" alt="mouseclick.png"></p>
+<h2 id="技术选择"><a href="#技术选择" class="headerlink" title="技术选择"></a>技术选择</h2><p>简单了解了下目前比较主流的Hexo、Jekyll和Hugo三种静态博客框架，最后选取Hexo作为此次网页博客的构建框架。</p>
+<h3 id="选择Hexo框架的原因："><a href="#选择Hexo框架的原因：" class="headerlink" title="选择Hexo框架的原因："></a>选择Hexo框架的原因：</h3><p>1.Hexo使用Markdown语言编写文章，然后通过 Hexo 命令快速生成静态网页。由于其基于Node.js，生成静态页面的速度非常快<br>2.Hexo拥有庞大的主题库，用户可以选择适合自己的主题，也可以根据需要定制主题，甚至开发自己的主题。<br>3.Hexo有一个活跃的插件社区，可以通过安装插件来扩展功能，如添加评论系统、分享功能、标签云等。<br>4.Hexo可以非常容易地集成GitHub Pages进行博客部署。只需要在GitHub上创建一个仓库，并将Hexo生成的静态文件推送到这个仓库，就可以利用GitHub Pages的免费托管服务来运行博客。<br>5.Hexo本身非常轻量级，不会对博客性能产生额外的影响。它使用了高效的渲染引擎，可以在短时间内生成大量的静态页面。</p>
+<h2 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h2><ul>
+<li><p>GIT BASH基本配置并绑定GitHub SSH keys</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;这里换上你的用户名&quot;</span><br><span class="line">git config --global user.email &quot;这里换上你的邮箱&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;这里换上你的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p><img src="https://s2.loli.net/2024/04/16/ygS3eMXT1hd4NAZ.png" alt="ssh.png"></p>
+</li>
+<li><p>Git bash确认</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装deployer插件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改url</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">https://github.com/user_name/user_name.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Git部署</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></li>
+</ul>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/hexo/">hexo</a><a class="post-meta__tags" href="/tags/git/">git</a><a class="post-meta__tags" href="/tags/Markdown/">Markdown</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2024/04/16/nJo16MNArsQbChS.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/02/27/inception/" title="Inception|盗梦空间(2010)"><img class="cover" src="https://s2.loli.net/2024/04/16/8fEwKbUrlQTupGC.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Inception|盗梦空间(2010)</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Dyy</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/399617"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/399617" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:51265903081@stu.ecnu.edu.cn" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%80%89%E5%8F%96"><span class="toc-number">1.</span> <span class="toc-text">主题选取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><span class="toc-number">2.</span> <span class="toc-text">设计思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="toc-number">3.</span> <span class="toc-text">功能实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%BB%E9%A1%B5%E5%AF%BC%E8%88%AA%E6%A0%8F%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.1.</span> <span class="toc-text">1.主页导航栏设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2%E8%AE%BE%E7%BD%AE"><span class="toc-number">3.2.</span> <span class="toc-text">2.博客页面设置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E9%BC%A0%E6%A0%87%E7%89%B9%E6%95%88"><span class="toc-number">3.3.</span> <span class="toc-text">3.鼠标特效</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E9%80%89%E6%8B%A9"><span class="toc-number">4.</span> <span class="toc-text">技术选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%89%E6%8B%A9Hexo%E6%A1%86%E6%9E%B6%E7%9A%84%E5%8E%9F%E5%9B%A0%EF%BC%9A"><span class="toc-number">4.1.</span> <span class="toc-text">选择Hexo框架的原因：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Git%E9%85%8D%E7%BD%AE"><span class="toc-number">5.</span> <span class="toc-text">Git配置</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/04/15/hexo/" title="静态博客搭建报告"><img src="https://s2.loli.net/2024/04/16/nJo16MNArsQbChS.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="静态博客搭建报告"/></a><div class="content"><a class="title" href="/2024/04/15/hexo/" title="静态博客搭建报告">静态博客搭建报告</a><time datetime="2024-04-15T09:58:00.000Z" title="发表于 2024-04-15 17:58:00">2024-04-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/02/27/inception/" title="Inception|盗梦空间(2010)"><img src="https://s2.loli.net/2024/04/16/8fEwKbUrlQTupGC.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Inception|盗梦空间(2010)"/></a><div class="content"><a class="title" href="/2024/02/27/inception/" title="Inception|盗梦空间(2010)">Inception|盗梦空间(2010)</a><time datetime="2024-02-27T06:18:00.000Z" title="发表于 2024-02-27 14:18:00">2024-02-27</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://s2.loli.net/2024/04/16/GKACn7aZWITmYh6.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Dyy</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-heart.min.js" async="async" mobile="true"></script></div></body></html>
